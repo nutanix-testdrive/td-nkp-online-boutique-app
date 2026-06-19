@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: online-boutique
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: ./helm-chart
+      sourceRef:
+        kind: GitRepository
+        name: online-boutique-catalog
+      interval: 1m
+  values:
+    images:
+      repository: us-central1-docker.pkg.dev/google-samples/microservices-demo
+      tag: v0.10.5
+    frontend:
+      externalService: true
+    cartDatabase:
+      type: redis
+      inClusterRedis:
+        create: true
