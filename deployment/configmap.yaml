@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: online-boutique-overrides
+  namespace: kommander
+data:
+  values.yaml: |
+    images:
+      repository: us-central1-docker.pkg.dev/google-samples/microservices-demo
+      tag: v0.10.5
+    frontend:
+      externalService: true
+    cartDatabase:
+      type: redis
+      inClusterRedis:
+        create: true

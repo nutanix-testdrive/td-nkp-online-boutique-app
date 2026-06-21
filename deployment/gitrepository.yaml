@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: online-boutique-catalog
+  namespace: kommander
+spec:
+  interval: 1m
+  url: https://github.com/nutanix-testdrive/td-nkp-online-boutique-app
+  ref:
+    branch: ft/nkp
