@@ -1,0 +1,14 @@
+apiVersion: apps.kommander.d2iq.io/v1alpha3
+kind: AppDeployment
+metadata:
+  name: online-boutique
+  namespace: online-boutique
+spec:
+  appRef:
+    name: online-boutique
+    kind: App
+  configOverrides:
+    name: online-boutique-overrides
+  clusterSelector:
+    matchLabels:
+      workspace: my-edge-application

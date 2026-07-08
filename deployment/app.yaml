@@ -1,0 +1,15 @@
+apiVersion: apps.kommander.d2iq.io/v1alpha3
+kind: App
+metadata:
+  name: online-boutique
+  namespace: kommander
+spec:
+  chart:
+    spec:
+      chart: ./helm-chart
+      sourceRef:
+        kind: GitRepository
+        name: online-boutique-catalog
+        namespace: kommander
+      version: 0.10.5
+  releaseNamespace: online-boutique

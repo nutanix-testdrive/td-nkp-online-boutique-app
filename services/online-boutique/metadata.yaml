@@ -1,0 +1,55 @@
+schema: catalog.nkp.nutanix.com/v1/application-metadata
+type: catalog
+allowMultipleInstances: false
+category:
+  - microservices
+  - demo
+  - e-commerce
+description: "Cloud-first microservices demo application with 11 services showcasing Kubernetes best practices"
+displayName: Online Boutique
+icon: PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzQyODVGNCIgZD0iTTIwIDRIMEwyIDIwbDIgMmgxNmwyLTJ6bS04IDE0Yy0xLjEgMC0yLS45LTItMnMuOS0yIDItMiAyIC45IDIgMi0uOSAyLTIgMnptNy43LTVoLTNjLjQtLjguNy0xLjcuNy0yLjcgMC0xLS4zLTEuOS0uNy0yLjdoM2MxLjEgMCAyIC45IDIgMnMtLjkgMi0yIDJ6TTE4IDZjMCAuNi0uNCAxLTEgMXMtMS0uNC0xLTEgLjQtMSAxLTEgMSAuNCAxIDF6Ii8+PC9zdmc+
+licensing:
+  - Starter
+  - Pro
+  - Ultimate
+overview: |
+  # Online Boutique
+
+  **Online Boutique** is a cloud-first microservices demo application developed by Google. The application is a web-based e-commerce app where users can browse items, add them to the cart, and purchase them.
+
+  ## Architecture
+
+  Online Boutique is composed of 11 microservices written in different languages that communicate over gRPC:
+
+  - **Frontend** (Go): Exposes an HTTP server to serve the website
+  - **Cart Service** (C#): Stores shopping cart items in Redis
+  - **Product Catalog Service** (Go): Provides product list and search
+  - **Currency Service** (Node.js): Converts currencies using real exchange rates
+  - **Payment Service** (Node.js): Charges credit cards (mock)
+  - **Shipping Service** (Go): Provides shipping cost estimates
+  - **Email Service** (Python): Sends order confirmation emails (mock)
+  - **Checkout Service** (Go): Orchestrates payment, shipping, and email
+  - **Recommendation Service** (Python): Recommends products based on cart
+  - **Ad Service** (Java): Provides contextual advertisements
+  - **Load Generator** (Python/Locust): Simulates realistic user traffic
+
+  ## Key Features
+
+  - **Polyglot Architecture**: Services written in Go, C#, Node.js, Python, and Java
+  - **gRPC Communication**: Inter-service communication using Protocol Buffers
+  - **Cloud Native**: Designed for Kubernetes with best practices
+  - **Realistic Demo**: Simulates a real-world e-commerce application
+  - **Load Testing**: Built-in load generator for performance testing
+
+  ## Access
+
+  After deployment, the application is accessible via the `frontend-external` LoadBalancer service. The UI provides a fully functional e-commerce experience with product browsing, cart management, and checkout workflows.
+
+  ## More Information
+
+  - [GitHub Repository](https://github.com/GoogleCloudPlatform/microservices-demo)
+  - [Architecture Diagram](https://github.com/GoogleCloudPlatform/microservices-demo/blob/main/docs/img/architecture-diagram.png)
+  - [Development Guide](https://github.com/GoogleCloudPlatform/microservices-demo/blob/main/docs/development-guide.md)
+scope:
+  - project
+supportLink: "https://github.com/GoogleCloudPlatform/microservices-demo"
