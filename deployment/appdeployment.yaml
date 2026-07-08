@@ -2,7 +2,7 @@ apiVersion: apps.kommander.d2iq.io/v1alpha3
 kind: AppDeployment
 metadata:
   name: online-boutique
-  namespace: kommander
+  namespace: online-boutique
 spec:
   appRef:
     name: online-boutique
